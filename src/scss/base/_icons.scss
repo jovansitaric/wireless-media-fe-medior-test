@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('assets/icons/icomoon.eot?yu39xm');
+    src:  url('assets/icons/icomoon.eot?yu39xm#iefix') format('embedded-opentype'),
+      url('assets/icons/icomoon.ttf?yu39xm') format('truetype'),
+      url('assets/icons/icomoon.woff?yu39xm') format('woff'),
+      url('assets/icons/icomoon.svg?yu39xm#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-about:before {
+    content: "\e900";
+    color: #acb0b7;
+  }
+  .icon-burger:before {
+    content: "\e901";
+    color: #9d9d9c;
+  }
+  .icon-calculator:before {
+    content: "\e902";
+    color: #9d9d9c;
+  }
+  .icon-clock:before {
+    content: "\e903";
+    color: #9d9d9c;
+  }
+  .icon-cloud:before {
+    content: "\e904";
+    color: #9d9d9c;
+  }
+  .icon-contact:before {
+    content: "\e905";
+    color: #9d9d9c;
+  }
+  .icon-email:before {
+    content: "\e906";
+    color: #6d6e71;
+  }
+  .icon-facebook:before {
+    content: "\e907";
+    color: #6d6e71;
+  }
+  .icon-heart:before {
+    content: "\e908";
+    color: #9d9d9c;
+  }
+  .icon-home:before {
+    content: "\e909";
+    color: #acb0b7;
+  }
+  .icon-our-work:before {
+    content: "\e90a";
+    color: #9d9d9c;
+  }
+  .icon-search:before {
+    content: "\e90b";
+    color: #9d9d9c;
+  }
+  .icon-top:before {
+    content: "\e90c";
+    color: #9d9d9c;
+  }
+  .icon-twitter:before {
+    content: "\e90d";
+    color: #6d6e71;
+  }
+  

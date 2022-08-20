@@ -1,0 +1,35 @@
+.m-list {
+    list-style: none;
+
+    &.-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+
+        .-nav & {
+            @include first-child-none('margin-left', 10px);
+            color: transparentize($black, .3);
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 10px;
+                margin-left: 10px;
+                background-color: currentColor;
+                transform: rotate(15deg);
+            }
+
+            &:last-child::after {
+                content: none;
+            }
+        }
+
+        &--link {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+    }
+}
