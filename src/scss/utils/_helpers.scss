@@ -1,7 +1,28 @@
+@use 'sass:math';
+
+.-fdc {
+    flex-direction: column;
+}
+
 .-aic {
     align-items: center;
 }
 
 .-jcsb {
     justify-content: space-between;
+}
+
+.-asr {
+    align-self: flex-end;
+}
+
+.-mt20 {
+    margin-top: 20px;
+}
+
+.-innerWrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: math.div(-$grid-gutter, 2);
+    margin-right: math.div(-$grid-gutter, 2);
 }

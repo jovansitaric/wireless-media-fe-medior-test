@@ -2,34 +2,116 @@
     list-style: none;
 
     &.-nav {
+        display: none;
+        align-items: center;
+        margin-left: 25px;
+        transition: visibility $transition-default-time;
+
+        @include media-up('_m') {
+            display: flex;
+        }
+    }
+
+    &.-footer {
         display: flex;
         align-items: center;
+        margin-top: 5px;
+        margin-right: 87px;
     }
 
     &__item {
 
         .-nav & {
-            @include first-child-none('margin-left', 10px);
-            color: transparentize($black, .3);
+            @include first-child-none('margin-left', 12px);
+            color: $gray;
 
             &::after {
                 content: '';
                 display: inline-block;
                 width: 1px;
                 height: 10px;
-                margin-left: 10px;
+                margin-left: 12px;
                 background-color: currentColor;
                 transform: rotate(15deg);
+            }
+
+            &:nth-child(3) {
+                margin-left: 6px;
+            }
+
+            &:last-child {
+                margin-left: 7px;
             }
 
             &:last-child::after {
                 content: none;
             }
+
+            &:first-child {
+
+                &:hover,
+                &:active,
+                &:focus,
+                &:visited {
+                    color: $yellow-green;
+                }
+            }
+
+            &:nth-child(2) {
+
+                &:hover,
+                &:active,
+                &:focus,
+                &:visited {
+                    color: $olive-green;
+                }
+            }
+
+            &:nth-child(3) {
+
+                &:hover,
+                &:active,
+                &:focus,
+                &:visited {
+                    color: $teal;
+                }
+            }
+
+            &:last-child {
+
+                &:hover,
+                &:active,
+                &:focus,
+                &:visited {
+                    color: $blue-2;
+                }
+            }
+
+            &--link {
+                color: inherit;
+                transition: color $transition-default-time;
+            }
+        }
+
+        .-footer & {
+            @include first-child-none('margin-left', 12px);
+
+            &:last-child {
+                margin-left: 15px;
+            }
+
+            &::after {
+                content: none;
+            }
         }
 
         &--link {
-            font-size: 1.25rem;
+            font-size: 1.7rem;
             text-transform: uppercase;
+
+            .-footer & {
+                font-size: 1.4rem;
+            }
         }
     }
 }

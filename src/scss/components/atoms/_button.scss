@@ -1,0 +1,12 @@
+.a-button {
+
+    &.-main {
+        margin-top: 3px;
+        font-size: .86rem;
+        border: 0;
+        text-transform: uppercase;
+        padding: 2px 5px;
+        color: inherit;
+        background-color: $light-gray-1;
+    }
+}

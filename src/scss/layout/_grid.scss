@@ -1,3 +1,5 @@
+@use "sass:math";
+
 ._wr {
   width: 100%;
   max-width: 330px;
@@ -11,7 +13,7 @@
   }
 
   @include media-up("_m") {
-    max-width: 660px;
+    max-width: 705px;
   }
 
   @include media-up("_l") {
@@ -141,7 +143,10 @@
 ._xl10,
 ._xl11,
 ._xl12 {
+  position: relative;
   width: 100%;
+  padding-left: math.div($grid-gutter, 2);
+  padding-right: math.div($grid-gutter, 2);
 }
 
 @media only screen and (min-width: 576px) {

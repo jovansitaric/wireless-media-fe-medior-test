@@ -1,0 +1,67 @@
+.m-card {
+
+    .-whoWeAre & {
+        margin-top: $grid-gutter;
+        display: flex;
+        align-items: center;
+        min-height: 113px;
+
+        &:first-of-type {
+            margin-top: 15px;
+        }
+    }
+
+    .-whatWeDo & {
+        margin-top: $grid-gutter;
+
+        &:nth-of-type(2) {
+            order: 3;
+        }
+
+        &:nth-of-type(3) {
+            order: 2;
+        }
+
+        &:last-of-type {
+            order: 4;
+        }
+    }
+
+    &__image {
+
+        .-whoWeAre & {
+            max-height: 113px;
+        }
+
+        &--image {
+
+            .-whoWeAre & {
+                min-width: 189px;
+                max-height: inherit;
+            }
+        }
+    }
+
+    &__content {
+
+        .-whoWeAre & {
+            display: flex;
+            flex-direction: column;
+            min-height: inherit;
+        }
+
+        .-whatWeDo & {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 113px;
+            background-color: $light-gray-2;
+        }
+
+        &--text {
+            margin-top: 18px;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+        }
+    }
+}

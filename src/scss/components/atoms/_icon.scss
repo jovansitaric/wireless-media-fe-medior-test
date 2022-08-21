@@ -1,0 +1,22 @@
+.a-icon {
+    font-size: 1.6rem;
+
+    &.-whatWeDo {
+        font-size: 4.5rem;
+
+        &.icon-cloud {
+            font-size: 4rem;
+        }
+    }
+
+    &.-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 37px;
+        height: 37px;
+        font-size: 1.7rem;
+        border-radius: 50%;
+        background-color: $white;
+    }
+}

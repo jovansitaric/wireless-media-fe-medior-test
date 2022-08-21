@@ -1,0 +1,15 @@
+.m-social {
+
+    &.-footer {
+        display: flex;
+        align-items: center;
+
+        > .a-icon {
+            @include first-child-none('margin-left', 20px);
+
+            &:first-child {
+                font-size: 2rem;
+            }
+        }
+    }
+}

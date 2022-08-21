@@ -1,0 +1,18 @@
+.m-footer {
+    margin-top: 80px;
+    padding: 10px 0;
+    background-color: $light-gray-3;
+
+    > ._wr {
+        max-width: 690px;
+
+        > ._w {
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .a-icon.icon-top {
+        font-size: 2.3rem;
+    }
+}

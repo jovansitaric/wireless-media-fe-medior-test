@@ -1,3 +1,28 @@
 .m-navbar {
-    
+    border-bottom: 8px solid;
+    border-image: linear-gradient(to right, $yellow-green, $blue-1) 1;
+
+    @include media-up('_s') {
+        padding: 11px 0;
+    }
+
+    @include media-up('_m') {
+        padding: 17px 0;
+    }
+
+    &__logo {
+        max-width: 127px;
+
+        @include media-up('_m') {
+            max-width: 151px;
+        }
+    }
+
+    .a-icon.icon-search {
+        margin-bottom: -5px;
+
+        @include media-up('_m') {
+            margin-bottom: 7px;
+        }
+    }
 }

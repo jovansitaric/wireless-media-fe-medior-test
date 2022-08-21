@@ -1,0 +1,19 @@
+.m-section {
+    margin-top: 45px;
+    color: $dark-gray;
+
+    > ._wr {
+        max-width: 415px;
+
+        > ._w {
+            flex-direction: column;
+        }
+    }
+    
+    &.-whatWeDo {
+        
+        .-innerWrap {
+            margin-top: -20px;
+        }
+    }
+}

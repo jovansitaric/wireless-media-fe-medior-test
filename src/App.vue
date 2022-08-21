@@ -1,29 +1,30 @@
 <template>
   <NavBar />
+  <HomeSlider />
+  <WhoWeAre />
+  <WhatWeDo />
+  <HomeFooter />
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar'
-// import axios from 'axios';
+import HomeSlider from './components/HomeSlider'
+import WhatWeDo from './components/WhatWeDo.vue';
+import WhoWeAre from './components/WhoWeAre.vue';
+import HomeFooter from './components/HomeFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    NavBar
-  },
+    NavBar,
+    HomeSlider,
+    WhoWeAre,
+    WhatWeDo,
+    HomeFooter
+},
 }
 </script>
 
 <style lang="scss">
-
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+/* Silence is golden */
 </style>

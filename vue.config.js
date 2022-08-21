@@ -11,4 +11,8 @@ module.exports = defineConfig({
         },
     },
   },
+
+  devServer: {
+    proxy: "https://jsonkeeper.com/"
+  }
 })
