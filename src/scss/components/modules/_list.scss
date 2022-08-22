@@ -2,26 +2,39 @@
     list-style: none;
 
     &.-nav {
-        display: none;
+        position: absolute;
+        top: 39px;
+        visibility: hidden;
+        transition: visibility 400ms;
+    }
+
+    &.-desktopNav {
+        display: flex;
         align-items: center;
         margin-left: 25px;
-        transition: visibility $transition-default-time;
+    }
 
-        @include media-up('_m') {
-            display: flex;
-        }
+    &.-navIcons {
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+        margin-right: 6px;
     }
 
     &.-footer {
-        display: flex;
-        align-items: center;
-        margin-top: 5px;
-        margin-right: 87px;
+        display: none;
+
+        @include media-up('_m') {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            margin-right: 87px;
+        }
     }
 
     &__item {
 
-        .-nav & {
+        .-desktopNav & {
             @include first-child-none('margin-left', 12px);
             color: $gray;
 
@@ -47,50 +60,14 @@
                 content: none;
             }
 
-            &:first-child {
-
-                &:hover,
-                &:active,
-                &:focus,
-                &:visited {
-                    color: $yellow-green;
-                }
-            }
-
-            &:nth-child(2) {
-
-                &:hover,
-                &:active,
-                &:focus,
-                &:visited {
-                    color: $olive-green;
-                }
-            }
-
-            &:nth-child(3) {
-
-                &:hover,
-                &:active,
-                &:focus,
-                &:visited {
-                    color: $teal;
-                }
-            }
-
-            &:last-child {
-
-                &:hover,
-                &:active,
-                &:focus,
-                &:visited {
-                    color: $blue-2;
-                }
-            }
-
             &--link {
                 color: inherit;
                 transition: color $transition-default-time;
             }
+        }
+
+        .-navIcons & {
+            @include first-child-none('margin-left', 35px);
         }
 
         .-footer & {
@@ -109,8 +86,16 @@
             font-size: 1.7rem;
             text-transform: uppercase;
 
+            .-navIcons & {
+                font-size: 2rem;
+            }
+
             .-footer & {
                 font-size: 1.4rem;
+            }
+
+            &.a-icon.icon-contact {
+                font-size: 1.8rem;
             }
         }
     }

@@ -149,7 +149,7 @@
   padding-right: math.div($grid-gutter, 2);
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 480px) {
   /* For tablets: */
   ._s1 {
     width: 8.33%;

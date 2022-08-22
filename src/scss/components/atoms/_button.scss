@@ -5,8 +5,12 @@
         font-size: .86rem;
         border: 0;
         text-transform: uppercase;
-        padding: 2px 5px;
+        padding: 2px 3px;
         color: inherit;
         background-color: $light-gray-1;
+
+        @include media-up('_m') {
+            padding: 2px 5px;
+        }
     }
 }

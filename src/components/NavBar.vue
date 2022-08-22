@@ -3,7 +3,7 @@
         <div class="_wr">
             <div class="_w -aic -jcsb">
                 <img class="m-navbar__logo" src="../assets/images/logo.png" alt="wireless media logo">
-                <NavBarList class="-nav" />
+                <NavBarList />
                 <span class="a-icon icon-search"></span>
             </div>
         </div>

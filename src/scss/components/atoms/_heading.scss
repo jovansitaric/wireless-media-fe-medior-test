@@ -3,6 +3,11 @@
     &.-two {
         font-size: 3rem;
         text-transform: uppercase;
+        letter-spacing: .5px;
+        
+        @include media-up('_m') {
+            letter-spacing: normal;
+        }
     }
 
     &.-three {

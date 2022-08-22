@@ -6,9 +6,9 @@
           {{ whatWeDo.title }}
         </h2>
         <div class="-innerWrap">
-          <div class="m-card _m6" v-for="card in whatWeDo.items" :key="card.id">
+          <div class="m-card _s6" v-for="card in whatWeDo.items" :key="card.id">
             <div class="m-card__content">
-              <span class="a-icon -whatWeDo" :class="`icon-${card.icon}`" :src="card.thumbnailUrl" :alt="card.title"></span>
+              <a href="#" class="a-icon -whatWeDo" :class="`icon-${card.icon}`" :src="card.thumbnailUrl" :alt="card.title"></a>
             </div>
           </div>
         </div>

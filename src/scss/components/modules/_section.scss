@@ -3,7 +3,11 @@
     color: $dark-gray;
 
     > ._wr {
-        max-width: 415px;
+        max-width: 412px;
+
+        @include media-up('_m') {
+            max-width: 415px;
+        }
 
         > ._w {
             flex-direction: column;
@@ -14,6 +18,14 @@
         
         .-innerWrap {
             margin-top: -20px;
+        }
+    }
+
+    &.-whoWeAre {
+        margin-top: 22px;
+
+        @include media-up('_m') {
+            margin-top: inherit;
         }
     }
 }

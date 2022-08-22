@@ -6,10 +6,10 @@
           {{ whoWeAre.title }}
         </h2>
         <div class="m-card -innerWrap" v-for="card in whoWeAre.articles" :key="card.id">
-          <div class="m-card__image _m6">
+          <div class="m-card__image _s6">
             <img class="m-card__image--image" :src="card.thumbnailUrl" :alt="card.title">
           </div>
-          <div class="m-card__content _m6">
+          <div class="m-card__content _s6">
             <h3 class="a-heading -three">{{ card.title }}</h3>
             <p class="m-card__content--text">{{ card.excerpt }}</p>
             <a href="#" class="a-button -main -asr" @click="preventDefault">Show more</a>

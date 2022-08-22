@@ -1,0 +1,38 @@
+.a-hover {
+    
+    &.-color:hover {
+        transition: color $transition-default-time;
+
+        &.-effectOne {
+            color: $yellow-green;
+
+            &::before {
+                color: inherit;
+            }
+        }
+    
+        &.-effectTwo {
+            color: $olive-green;
+
+            &::before {
+                color: inherit;
+            }
+        }
+        
+        &.-effectThree {
+            color: $teal;
+
+            &::before {
+                color: inherit;
+            }
+        }
+    
+        &.-effectFour {
+            color: $blue-2;
+
+            &::before {
+                color: inherit;
+            }
+        }
+    }
+}

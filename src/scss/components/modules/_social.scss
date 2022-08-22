@@ -3,6 +3,11 @@
     &.-footer {
         display: flex;
         align-items: center;
+        margin-left: 5px;
+
+        @include media-up('_m') {
+            margin-left: 0;
+        }
 
         > .a-icon {
             @include first-child-none('margin-left', 20px);

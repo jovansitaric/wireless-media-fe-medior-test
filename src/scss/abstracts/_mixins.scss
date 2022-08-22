@@ -1,7 +1,7 @@
 // Desktop media style
 @mixin media-up($value) {
     @if $value == "_" {
-        @media only screen and (min-width: 120px) {
+        @media only screen and (min-width: $_) {
             @content;
         }
     } @else if $value == "_xs" {
@@ -9,11 +9,11 @@
             @content;
         }
     } @else if $value == "_s" {
-        @media only screen and (min-width: 480px) {
+        @media only screen and (min-width: $_s) {
             @content;
         }
     } @else if $value == "_m" {
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: $_m) {
             @content;
         }
     } @else if $value == "_l" {
