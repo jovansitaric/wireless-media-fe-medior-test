@@ -1,37 +1,43 @@
 .a-hover {
     
-    &.-color:hover {
-        transition: color $transition-default-time;
+    &.-color {
 
-        &.-effectOne {
-            color: $yellow-green;
-
-            &::before {
-                color: inherit;
-            }
+        &::before {
+            transition: color $transition-default-time;
         }
+
+        &:hover {
+
+            &.-effectOne {
+                color: $yellow-green;
     
-        &.-effectTwo {
-            color: $olive-green;
-
-            &::before {
-                color: inherit;
+                &::before {
+                    color: $yellow-green;
+                }
             }
-        }
         
-        &.-effectThree {
-            color: $teal;
-
-            &::before {
-                color: inherit;
-            }
-        }
+            &.-effectTwo {
+                color: $olive-green;
     
-        &.-effectFour {
-            color: $blue-2;
-
-            &::before {
-                color: inherit;
+                &::before {
+                    color: $olive-green;
+                }
+            }
+            
+            &.-effectThree {
+                color: $teal;
+    
+                &::before {
+                    color: $teal;
+                }
+            }
+        
+            &.-effectFour {
+                color: $blue-2;
+    
+                &::before {
+                    color: $blue-2;
+                }
             }
         }
     }

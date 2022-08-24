@@ -2,15 +2,32 @@
 
     &.-main {
         margin-top: 3px;
-        font-size: .86rem;
+        font-size: 1rem;
+        font-weight: bold;
         border: 0;
         text-transform: uppercase;
-        padding: 2px 3px;
+        padding: 7px 3px;
+        border: 5px;
         color: inherit;
         background-color: $light-gray-1;
+        transition: background-color $transition-default-time, color $transition-default-time;
+
+        @include media-up('_s') {
+            padding: 2px 3px;
+            font-weight: normal;
+            font-size: .86rem;
+        }
 
         @include media-up('_m') {
             padding: 2px 5px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited {
+            background-color: $yellow-green;
+            color: $white;
         }
     }
 }

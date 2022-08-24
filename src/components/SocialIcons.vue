@@ -1,6 +1,6 @@
 <template>
   <div class="m-social -footer">
-    <a href="#" v-for="social in socialIcons" :key="social.id" class="a-icon -circle" :class="`icon-${social.icon}`" @click="preventDefault"></a>
+    <a href="javascript: void(0);" v-for="social in socialIcons" :key="social.id" class="a-icon -circle" :class="`icon-${social.icon}`" @click="preventDefault"></a>
   </div>
 </template>
 

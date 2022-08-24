@@ -7,61 +7,111 @@
         min-height: 113px;
 
         &:first-of-type {
-            margin-top: 15px;
+            margin-top: 10px;
+
+            @include media-up('_s') {
+                margin-top: 15px;
+            }
         }
     }
 
     .-whatWeDo & {
-        margin-top: $grid-gutter;
+        margin-top: 18px;
 
-        &:nth-of-type(2) {
-            order: 3;
+        @include media-up('_s') {
+            margin-top: $grid-gutter;
+
+            &:nth-of-type(2) {
+                order: 3;
+            }
+    
+            &:nth-of-type(3) {
+                order: 2;
+            }
+    
+            &:last-of-type {
+                order: 4;
+            }
         }
 
-        &:nth-of-type(3) {
-            order: 2;
-        }
+        &:nth-child(2) {
 
-        &:last-of-type {
-            order: 4;
         }
     }
 
     &__image {
 
         .-whoWeAre & {
-            max-height: 113px;
+            max-height: 101px;
+            overflow: hidden;
+            display: flex;
+
+            @include media-up('_s') {
+                max-height: 113px;
+            }
         }
 
         &--image {
 
             .-whoWeAre & {
-                min-width: 189px;
-                max-height: inherit;
+
+                @include media-up('_s') {
+                    min-width: 189px;
+                    max-height: inherit;
+                }
             }
         }
     }
 
     &__content {
+        margin-top: 6px;
+        margin-left: 4px;
+
+        @include media-up('_s') {
+            margin-top: 0;
+            margin-left: 0;
+        }
 
         .-whoWeAre & {
             display: flex;
             flex-direction: column;
-            min-height: inherit;
+
+            @include media-up('_s') {
+                min-height: inherit;
+            }
         }
 
         .-whatWeDo & {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 113px;
+            min-height: 102px;
             background-color: $light-gray-2;
+
+            @include media-up('_s') {
+                min-height: 113px;
+            }
+
+            > a:hover,
+            > a:active,
+            > a:focus,
+            > a:visited {
+
+                &::before {
+                    color: $yellow-green;
+                }
+            }
         }
 
         &--text {
+            display: none;
             margin-top: 18px;
             font-size: 1.3rem;
             line-height: 1.6rem;
+
+            @include media-up('_s') {
+                display: block;
+            }
         }
 
         > .a-icon.-whatWeDo::before {

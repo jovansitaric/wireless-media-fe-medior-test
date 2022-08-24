@@ -4,7 +4,7 @@
         <div class="_w">
             <SocialIcons />
             <NavBarList childClass="-footer" />
-            <a href="#" class="a-icon -circle icon-top"></a>
+            <a href="#top" class="a-icon -circle icon-top"></a>
         </div>
     </div>
   </footer>

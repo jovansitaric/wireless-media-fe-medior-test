@@ -15,6 +15,20 @@
             &:first-child {
                 font-size: 2rem;
             }
+
+            &::before {
+                transition: color $transition-default-time;
+            }
+
+            &:hover,
+            &:active,
+            &:focus,
+            &:visited {
+
+                &::before {
+                    color: $yellow-green;
+                }
+            }
         }
     }
 }

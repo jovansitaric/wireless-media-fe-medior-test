@@ -3,9 +3,19 @@
 
     &.-nav {
         position: absolute;
-        top: 39px;
-        visibility: hidden;
-        transition: visibility 400ms;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        transition: transform $transition-default-time, visibility $transition-default-time;
+        transform: scaleY(0);
+        transform-origin: top;
+        z-index: 3;
+
+        &.-active {
+            visibility: visible;
+            transform: scaleY(1);
+        }
     }
 
     &.-desktopNav {
@@ -28,15 +38,36 @@
             display: flex;
             align-items: center;
             margin-top: 5px;
-            margin-right: 87px;
+            margin-right: auto;
+            margin-left: 58px;
         }
     }
 
     &__item {
 
+        .-nav & {
+            padding: 5px 0;
+            padding-left: 13px;
+            color: $white;
+        }
+
         .-desktopNav & {
             @include first-child-none('margin-left', 12px);
             color: $gray;
+
+            @for $i from 1 through length($theme-colors) {
+                $color: nth($theme-colors, $i);
+    
+                &:nth-child(#{$i}) {
+
+                    > a:hover,
+                    > a:active,
+                    > a:focus,
+                    > a:visited {
+                        color: $color;
+                    }
+                }
+            }
 
             &::after {
                 content: '';
@@ -49,7 +80,7 @@
             }
 
             &:nth-child(3) {
-                margin-left: 6px;
+                margin-left: 5px;
             }
 
             &:last-child {
@@ -64,10 +95,32 @@
                 color: inherit;
                 transition: color $transition-default-time;
             }
+
+            &--link::before {
+                transition: color $transition-default-time;
+            }
         }
 
         .-navIcons & {
             @include first-child-none('margin-left', 35px);
+
+            &--link::before {
+                transition: color $transition-default-time;
+            }
+
+            @for $i from 1 through length($theme-colors) {
+                $color: nth($theme-colors, $i);
+    
+                &:nth-child(#{$i}) {
+
+                    > a:hover::before,
+                    > a:active::before,
+                    > a:focus::before,
+                    > a:visited::before {
+                        color: $color;
+                    }
+                }
+            }
         }
 
         .-footer & {
@@ -82,9 +135,25 @@
             }
         }
 
+        .-nav & {
+
+            @for $i from 1 through length($theme-colors) {
+                $color: nth($theme-colors, $i);
+    
+                &:nth-child(#{$i}) {
+                    background-color: $color;
+                }
+            }
+        }
+
         &--link {
             font-size: 1.7rem;
             text-transform: uppercase;
+            transition: color $transition-default-time;
+
+            .-nav & {
+                color: $white;
+            }
 
             .-navIcons & {
                 font-size: 2rem;
@@ -96,6 +165,16 @@
 
             &.a-icon.icon-contact {
                 font-size: 1.8rem;
+            }
+        }
+
+        &--link:hover,
+        &--link:active,
+        &--link:focus,
+        &--link:visited {
+
+            .-nav & {
+                color: $black;
             }
         }
     }

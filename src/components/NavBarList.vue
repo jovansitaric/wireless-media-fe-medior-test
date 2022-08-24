@@ -1,12 +1,12 @@
 <template>
-    <ul :class="childClass" class="m-list -nav" v-if="isMobile">
-        <li v-for="item in navList" :key="item.id" class="m-list__item"><a href="#" class="m-list__item--link a-hover -color" :class="item.transition">{{ item.text }}</a></li>
+    <ul :class="[childClass, isMobileMenu]" class="m-list -nav" v-if="isMobile">
+        <li v-for="item in navList" :key="item.id" class="m-list__item"><a href="javascript: void(0);" class="m-list__item--link">{{ item.text }}</a></li>
     </ul>
     <ul :class="childClass" class="m-list -navIcons" v-if="isTablet">
-        <li v-for="item in navList" :key="item.id" class="m-list__item"><a href="#" class="m-list__item--link a-icon a-hover -color" :class="`icon-${item.icon} ${item.transition}`"></a></li>
+        <li v-for="item in navList" :key="item.id" class="m-list__item"><a href="javascript: void(0);" class="m-list__item--link a-icon" :class="`icon-${item.icon}`"></a></li>
     </ul>
     <ul :class="childClass" class="m-list -desktopNav" v-if="isDesktop">
-        <li v-for="item in navList" :key="item.id" class="m-list__item"><a href="#" class="m-list__item--link a-hover -color" :class="item.transition">{{ item.text }}</a></li>
+        <li v-for="item in navList" :key="item.id" class="m-list__item"><a href="javascript: void(0);" class="m-list__item--link">{{ item.text }}</a></li>
     </ul>
 </template>
 
@@ -54,7 +54,7 @@ export default {
         }
     },
 
-    props: ['childClass'],
+    props: ['childClass', 'isMobileMenu'],
 
     methods: {
 

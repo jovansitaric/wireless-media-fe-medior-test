@@ -3,7 +3,11 @@
     color: $dark-gray;
 
     > ._wr {
-        max-width: 412px;
+        max-width: 170px;
+
+        @include media-up('_s') {
+            max-width: 412px;
+        }
 
         @include media-up('_m') {
             max-width: 415px;
@@ -13,19 +17,75 @@
             flex-direction: column;
         }
     }
+
+    > ._wr.-heading {
+
+        @include media-down('_') {
+            max-width: 200px;
+        }
+    }
     
     &.-whatWeDo {
+        margin-top: 31px;
+
+        @include media-up('_s') {
+            margin-top: 45px;
+        }
         
         .-innerWrap {
-            margin-top: -20px;
+            margin-top: -14px;
+
+            @include media-up('_s') {
+                margin-top: -20px;
+            }
+        }
+
+        .a-heading.-two {
+            margin-left: 10px;
+            text-align: center;
+
+            @include media-up('_s') {
+                margin-left: 0;
+                text-align: left;
+            }
         }
     }
 
     &.-whoWeAre {
-        margin-top: 22px;
+        margin-top: 18px;
+
+        @include media-up('_s') {
+            margin-top: 22px;
+        }
 
         @include media-up('_m') {
-            margin-top: inherit;
+            margin-top: 45px;
+        }
+
+        .m-card:last-child {
+            margin-top: 20px;
+
+            @include media-up('_s') {
+                margin-top: $grid-gutter;
+            }
+        }
+
+        .a-heading.-two {
+            margin-left: 10px;
+            text-align: center;
+
+            @include media-up('_s') {
+                margin-left: 0;
+                text-align: left;
+            }
+        }
+
+        .a-button.-main {
+            margin-top: 10px;
+
+            @include media-up('_s') {
+                margin-top: 0;
+            }
         }
     }
 }

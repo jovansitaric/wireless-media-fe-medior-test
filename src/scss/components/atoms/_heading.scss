@@ -1,9 +1,14 @@
 .a-heading {
 
     &.-two {
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
-        letter-spacing: .5px;
+        letter-spacing: 1.5px;
+
+        @include media-up('_s') {
+            font-size: 3rem;
+            letter-spacing: .5px;
+        }
         
         @include media-up('_m') {
             letter-spacing: normal;
@@ -11,6 +16,11 @@
     }
 
     &.-three {
+        margin-left: -3px;
         font-size: 1.5rem;
+
+        @include media-up('_s') {
+            margin-left: 0;
+        }
     }
 }
